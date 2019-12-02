@@ -18,6 +18,7 @@
 #ifndef FROM_ANY_VALUE_HPP
 #define FROM_ANY_VALUE_HPP
 
+#include <iostream>
 /*
 * LOCAL includes
 */
