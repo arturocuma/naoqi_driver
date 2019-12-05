@@ -35,6 +35,8 @@ namespace driver
 {
 
 const robot::Robot& getRobot( const qi::SessionPtr& session );
+const robot::NaoqiVersion& getNaoqiVersion(const qi::SessionPtr &session);
+const robot::HardwareVersion& getHardwareVersion(const qi::SessionPtr &session);
 
 const naoqi_bridge_msgs::RobotInfo& getRobotInfo( const qi::SessionPtr& session );
 
