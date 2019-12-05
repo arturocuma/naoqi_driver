@@ -34,13 +34,25 @@ namespace naoqi
 
 namespace robot
 {
-enum Robot
-{
+enum Robot {
   UNIDENTIFIED,
   NAO,
   PEPPER,
   ROMEO
 };
+
+struct HardwareVersion {
+  std::string text;
+};
+
+struct NaoqiVersion {
+  int major;
+  int minor;
+  int patch;
+  int build;
+  std::string text;
+};
+
 }
 
 enum Topics {
