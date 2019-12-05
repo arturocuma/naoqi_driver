@@ -60,7 +60,10 @@ DiagnosticsConverter::DiagnosticsConverter( const std::string& name, float frequ
   // Allow for temperature reporting (for CPU)
   if ((robot_ == robot::PEPPER) || (robot_ == robot::NAO)) {
     p_body_temperature_ = session->service("ALBodyTemperature");
-    p_body_temperature_.call<void>("setEnableNotifications", true);
+
+    // Call setEnableNotifications if naoqi < 2.9
+    if ((naoqi_version_.major == 2 && naoqi_version_.minor < 9) || naoqi_version_.major < 2)
+        p_body_temperature_.call<void>("setEnableNotifications", true);
   }
 
   std::vector<std::vector<float> > joint_limits;
