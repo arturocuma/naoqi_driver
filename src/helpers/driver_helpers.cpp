@@ -59,19 +59,19 @@ static naoqi_bridge_msgs::RobotInfo& getRobotInfoLocal( const qi::SessionPtr& se
   {
     info.type = naoqi_bridge_msgs::RobotInfo::NAO;
     std::cout << BOLDCYAN << "NAO " << hardware_version
-              << RESETCOLOR << std::endl;
+              << RESETCOLOR;
   }
   if (std::string(robot) == "pepper" || std::string(robot) == "juliette" )
   {
     info.type = naoqi_bridge_msgs::RobotInfo::PEPPER;
     std::cout << BOLDCYAN << "Pepper " << hardware_version
-              << RESETCOLOR << std::endl;
+              << RESETCOLOR;
   }
   if (std::string(robot) == "romeo" )
   {
     info.type = naoqi_bridge_msgs::RobotInfo::ROMEO;
     std::cout << BOLDCYAN << "Romeo " << hardware_version
-              << RESETCOLOR << std::endl;
+              << RESETCOLOR;
   }
 
   std::cout << BOLDCYAN << "/" << naoqi_version 
