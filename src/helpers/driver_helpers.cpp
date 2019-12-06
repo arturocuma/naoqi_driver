@@ -241,7 +241,7 @@ const robot::NaoqiVersion& getNaoqiVersion(const qi::SessionPtr &session) {
     return naoqi_version;
   }
 
-  std::string buff{""};
+  std::string buff("");
   std::vector<int> version_numbers;
 
   for (std::string::size_type i = 0; i < naoqi_version.text.size(); ++i) {
