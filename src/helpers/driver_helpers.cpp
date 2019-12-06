@@ -248,13 +248,13 @@ const robot::NaoqiVersion& getNaoqiVersion(const qi::SessionPtr &session) {
     if (naoqi_version.text[i] != '.')
       buff += naoqi_version.text[i];
     else if (naoqi_version.text[i] == '.' && buff != "") {
-      version_numbers.push_back(std::stoi(buff));
+      version_numbers.push_back(std::atoi(buff.c_str()));
       buff = "";
     }
   }
 
   if (buff != "")
-    version_numbers.push_back(std::stoi(buff));
+    version_numbers.push_back(std::atoi(buff.c_str()));
   
   if (version_numbers.size() != 4) {
     std::cerr << "Unconsistent version number for NAOqi, should contain 4 "

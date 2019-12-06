@@ -52,7 +52,8 @@ AudioEventRegister::AudioEventRegister( const std::string& name, const float& fr
     std::map<std::string, std::string> config_map =\
       p_robot_model_.call<std::map<std::string, std::string> >("_getConfigMap");
     
-    micConfig = std::stoi(config_map["RobotConfig/Head/Device/Micro/Version"]);
+    micConfig = std::atoi(
+      config_map["RobotConfig/Head/Device/Micro/Version"].c_str());
   }
   
   if(micConfig){
