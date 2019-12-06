@@ -68,6 +68,8 @@ private:
   std::vector<std::string> frames_;
   /** Pre-filled messges that are sent */
   std::vector<sensor_msgs::Range> msgs_;
+  
+  bool _alSonarUsed();
 };
 
 } //publisher
